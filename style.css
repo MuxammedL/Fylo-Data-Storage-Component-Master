@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: left 0px top 50vh;
+    background-size: 100%;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+}
+.card-left{
+    width: 350px;
+    height: 200px;
+    margin-right: 30px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 6.5rem 10px 10px;
+}
+.card-right{
+    width: 540px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+}
+.shadow{
+    box-shadow: 0 30px 50px hsl(230, 54%, 11%);
+}
+.card-left-inner{
+    margin: 41px 135px 41px 41px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 118px;
+}
+.card-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons{
+    width: 50px;
+    height: 50px;
+    background-color: hsl(229, 57%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+.icons:hover{
+    background-color: hsla(229, 57%, 11%, 0.61);
+}
+.info{
+    position: absolute;
+    width: 180px;
+    height: 72px;
+    background-color: #fff;
+    border-radius: 10px 10px 0 10px;
+    right: 40px;
+}
+.triangle{
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border-bottom: 25px solid transparent;
+    border-right: 25px solid #fff;
+    top: 70px;
+    right: 40px;
+}
+.info .info-inner {
+    width: 130px;
+    height: 36px;
+    margin: 18px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+.info .info-inner p{
+    font-size: 12px;
+    font-weight: 700;
+    color: hsl(229, 7%, 55%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.card-text{
+    margin-top: 48px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    height: 152px;
+}
+.card-text-inner{
+    padding: 43px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.card-text-inner h2{
+    color: hsl(243, 100%, 93%);
+    font-size: 14px;
+    font-weight: 400;
+}
+.card-text-inner h2 span{
+    color: #fff;
+    font-weight: 700;
+}
+.storage{
+    width: 100%;
+    background-color: hsla(229, 57%, 11%, 0.6);
+    height: 20px;
+    border-radius: 10px;
+}
+.storage-occupied{
+    margin: 3px;
+    width: 70%;
+    height: 14px;
+    background-image: linear-gradient(to right, hsl(6,100%,80%),hsl(335,100%,65%));
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 3s ease;
+}
+.storage-occupied:hover{
+    width: 99%;
+}
+.card-text-inner .storage-occupied .icon{
+    border-radius: 50%;
+    background-color: #fff;
+    height: 12px;
+    width: 12px;
+    margin-right: 2px;
+    margin-left: auto;
+}
+.text{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+@media(max-width:1000px){
+    body{
+        background-image: url(images/bg-mobile.png);
+        background-position: left 0 top 0;
+        background-size: cover;
+    }
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-left{
+        margin: 0;
+    }
+    .card-right{
+        width: 350px;
+        height: 160px;
+        margin-top: 20px;
+    }
+    .shadow{
+        box-shadow: none;
+    }
+    .card-text{
+        margin: 0;
+        height: 100%;
+    }
+    .triangle{
+        display: none;
+    }
+    .info{
+        border-radius: 10px;
+        left: 85px;
+        top: 124px;
+    }
+    .card-text-inner{
+        padding: 30px 32px 60px 32px;
+    }
+    .card-text-inner h2{
+        text-align: center;
+    }
+    .storage{
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+}
